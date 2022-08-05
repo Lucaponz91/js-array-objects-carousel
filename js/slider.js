@@ -87,6 +87,7 @@ console.log(slideElements)
 const nextElement = document.querySelector('.arrow-next');
 // AGGIUNGO L'EVENT LISTENER
 nextElement.addEventListener('click', function () {
+	clearInterval(autoslide)
     // TOLGO CLASSE ACTIVE DALLA SLIDE ATTIVA
     slideElements[currentIndex].classList.remove('active');
 
@@ -107,6 +108,7 @@ nextElement.addEventListener('click', function () {
 const prevArrowElement = document.querySelector('.arrow-prev')
 // AGGIUNGO L'EVENT LISTENER
 prevArrowElement.addEventListener('click', function () {
+	clearInterval(autoslide)
 // 	// TOLGO CLASSE ACTIVE DALLA SLIDE ATTIVA
 	slideElements[currentIndex].classList.remove('active');
 	// LOOP
